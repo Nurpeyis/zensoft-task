@@ -2,41 +2,47 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+import logo from '../images/logo.svg'
+
+const Header = ({ siteTitle, nav }) => (
+  <header>
+    <Link to="/" className="logo">
+      <img src={logo} alt="logo" />
+    </Link>
+    <div className="header-right">
+      <nav>
+        <ul>
+          {nav.map((e, key) => {
+            return (
+              <li key={key}>
+                <Link to="/">{e}</Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
+      <div className="auth-link">
+        <Link to="/">Sign In</Link>
+      </div>
     </div>
-  </div>
+  </header>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  nav: PropTypes.array,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
+  nav: [
+    'Solutions',
+    'Platform',
+    'Services',
+    'Technologies',
+    'Client',
+    'Company',
+  ],
 }
 
 export default Header

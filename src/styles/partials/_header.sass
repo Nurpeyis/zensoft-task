@@ -1,0 +1,38 @@
+header
+  display: flex
+  align-items: center
+  padding: 30px
+
+.header-right
+  flex: 1
+  display: flex
+  justify-content: space-between
+  font-family: Montserrat
+  font-size: 1.25rem
+
+nav
+  padding: 0 30px
+  
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+
+    li
+      a
+        text-decoration: none
+        display: flex
+        padding: 0 20px
+        color: $dark
+        opacity: .5
+        transition: 0.075s ease-in-out
+
+        &:hover
+          color: $blue
+          opacity: 1
+
+.auth-link
+  a
+    text-decoration: none
+    color: $darkBlue
