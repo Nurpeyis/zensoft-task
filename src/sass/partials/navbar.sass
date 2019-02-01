@@ -1,0 +1,119 @@
+@import ../variables
+
+.hamburger-tgl
+  position: relative
+  width: 30px
+  height: 24px
+  cursor: pointer
+  display: none
+
+  .hamburger-inner
+    &, &:after, &:before
+      position: absolute
+      width: 30px
+      height: 2px
+      transition: 0.15s ease-in-out
+      border-radius: 5px
+      background-color: $blue
+      display: block
+
+    &
+      top: 50%
+      margin-top: -1px
+      
+    &:before
+      content: ''
+      top: -10px
+    
+    &:after
+      content: ''
+      bottom: -10px
+
+  &.on
+    .hamburger-inner
+      &:before
+        top: -7px
+        transform: translate3d(7px,0,0) rotate(45deg) scaleX(.7)
+      &:after
+        bottom: -7px
+        transform: translate3d(7px,0,0) rotate(-45deg) scaleX(.7)
+
+nav
+  padding: 0 30px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex: 1
+  font-family: $montserrat
+  
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+
+    li
+      a
+        text-decoration: none
+        display: flex
+        padding: 0 20px
+        color: $dark
+        opacity: .5
+        font-size: 1.25rem
+        font-weight: 300
+        transition: 0.075s ease-in-out
+
+        &:hover
+          color: $blue
+          opacity: 1
+
+.auth-link
+  a
+    font-size: 1.25rem
+    font-weight: 300
+    text-decoration: none
+    color: $darkBlue
+
+@media screen and (max-width: 1170px)
+  .hamburger-tgl
+    display: block
+    
+  nav
+    position: fixed
+    right: -100%
+    top: 84px
+    background-color: $white
+    flex-direction: column
+    min-height: calc(100vh - 84px)
+    max-width: 415px
+    width: 100%
+    transition: 0.15s ease-in-out
+    padding: 0
+
+    &.on
+      right: 0
+      box-shadow: -5px 0 10px -5px rgba($dark, .15)
+
+    ul
+      flex-direction: column
+      align-items: center
+      padding: 30px
+
+      li
+        margin: 15px 0
+
+  .auth-link
+    width: 100%
+
+    a
+      padding: 30px
+      background-color: $blue
+      color: $white
+      display: flex
+      align-items: center
+      justify-content: center
+
+@media screen and (max-width: 575px)
+  nav
+    top: 64px
+    min-height: calc(100vh - 64px)

@@ -1,0 +1,64 @@
+@import ../variables
+@import ../extensions
+
+.title-description
+  text-transform: uppercase
+  font-family: Montserrat
+  font-size: 1.25rem
+  line-height: 1.5
+  color: $dark
+  opacity: .5
+  margin-top: 20px
+
+.first-row
+  @extend %flex-centered
+  height: 100vh
+  position: relative
+
+  .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+  .content
+    width: 50%
+
+  .side-image
+    max-width: 600px
+    width: 50%
+    height: auto
+
+  .mouse-image
+    position: absolute
+    bottom: 30px
+    width: 20px
+
+@media screen and (max-aspect-ratio: 9/9)
+  .first-row
+    height: auto
+    min-height: 100vh
+
+    .container
+      flex-direction: column
+      justify-content: center
+
+    .content
+      width: 100%
+      
+    .side-image
+      max-width: 500px
+      margin: 60px auto
+      width: 100%
+
+@media screen and (max-width: 575px)
+  .first-row
+    margin-top: 80px
+
+    .side-image
+      margin: 40px auto
+
+    .mouse-image
+      display: none
+
+  .title-description
+    font-size: 1rem

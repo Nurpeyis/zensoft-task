@@ -1,0 +1,56 @@
+@import ../variables
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 1
+  width: 100%
+  background-color: rgba($white, .98)
+
+  .header-content
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 30px 40px
+    position: relative
+
+    &.on
+      &:before
+        display: block
+
+      &:after
+        width: 100%
+
+    &:before
+      content: ''
+      display: none
+      position: fixed
+      top: 84px
+      left: 0
+      width: 100%
+      height: calc(100vh - 84px)
+      background-color: rgba($dark, .85)
+      overflow: hidden
+
+    &:after
+      content: ''
+      position: absolute
+      bottom: -1px
+      left: 50%
+      transform: translateX(-50%)
+      display: block
+      height: 1px
+      width: 0
+      background-color: $blue
+      opacity: .25
+      transition: 0.25s ease-in-out
+
+@media screen and (max-width: 575px)
+  header
+    .header-content
+      padding: 20px 25px
+
+      &:before
+        top: 64px
+        height: calc(100vh - 64px)

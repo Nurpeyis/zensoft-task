@@ -1,3 +1,5 @@
+@import ../variables
+
 footer
   background-color: $darkBlue
   padding: 50px 0
@@ -7,6 +9,7 @@ footer
     display: flex
     align-items: flex-start
     justify-content: space-between
+    flex-wrap: wrap
 
   .section-title
     color: $white
@@ -18,7 +21,8 @@ footer
     flex: 1
 
   .section
-    margin-right: 100px
+    margin-right: 70px
+    margin-bottom: 30px
 
     ul
       padding: 0
@@ -40,7 +44,7 @@ footer
         opacity: 1
 
   .footer-right
-    max-width: 400px
+    max-width: 380px
 
   .description
     color: $white
@@ -53,3 +57,41 @@ footer
     a
       text-decoration: none
       color: $blue
+
+@media screen and (max-aspect-ratio: 9/9)
+  footer
+    .footer-links
+      justify-content: space-between
+
+    .section
+      margin-right: 0
+
+    .footer-right
+      max-width: 100%
+
+    .footer-contacts
+      display: flex
+      flex-wrap: wrap
+      margin-top: 30px
+
+      .section-title
+        width: 100%
+        margin-right: 0
+
+      p
+        margin-right: 30px
+        margin-bottom: 0
+
+@media screen and (max-width: 575px)
+  footer
+    .footer-links
+      flex-wrap: wrap
+
+    .section
+      margin-right: 40px
+
+      li
+        margin: 15px auto
+
+    .section-title
+      margin-bottom: 20px

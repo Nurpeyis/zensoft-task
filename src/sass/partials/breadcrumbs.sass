@@ -1,0 +1,39 @@
+@import ../variables
+
+.breadcrumbs
+  font-family: Montserrat, sans-serif
+  font-size: 1.125rem
+  margin-bottom: 30px
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+
+  li
+    color: $dark
+    opacity: .5
+
+    &:after
+      content: '/'
+      margin: 0 10px
+
+    &:last-child
+      &:after
+        display: none
+
+  a, span
+    text-decoration: none
+    color: $dark
+
+@media screen and (max-width: 575px)
+  .breadcrumbs
+    font-size: .875rem
+
+    ul
+      flex-direction: column
+
+    li
+      &:after
+        margin: 0 5px

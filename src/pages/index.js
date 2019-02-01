@@ -1,21 +1,22 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { Component } from 'react'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import Layout from '../components/partials/Layout'
+import SEO from '../components/Seo'
+import Intro from '../components/Intro'
+import DevSteps from '../components/DevSteps'
+import Devider from '../components/partials/Devider'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image src="gatsby-astronaut.png" />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+class IndexPage extends Component {
+  render() {
+    return (
+      <Layout>
+        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <Intro />
+        <Devider />
+        <DevSteps />
+      </Layout>
+    )
+  }
+}
 
-export default IndexPage
+export default IndexPage;
