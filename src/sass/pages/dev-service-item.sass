@@ -1,0 +1,38 @@
+@import ../variables
+@import ../extensions
+
+.dev-service-item
+  padding-left: 20px
+
+  .item-title
+    font-family: $montserrat
+    // font-size: 1.25rem
+    font-weight: 400
+    color: $dark
+    margin-bottom: 30px
+    position: relative
+    line-height: 1
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 50%
+      left: -20px
+      transform: translateY(-50%)
+      width: 4px
+      height: 4px
+      background-color: $blue
+      border-radius: 4px
+      box-shadow: 0 0 0 4px rgba($blue, .15)
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    font-family: $roboto
+    color: $grey
+    font-weight: 300
+
+    li
+      margin: 20px 0
