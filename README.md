@@ -9,6 +9,8 @@
 </p>
 <h1 align="center">A Test Task For The Job Vacancy</h1>
 
+## Demo: https://affectionate-goldstine-0b8a3c.netlify.com/
+
 ## 🚀 Guide
 
 1.  Clone the project
