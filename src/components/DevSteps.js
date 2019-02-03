@@ -34,7 +34,7 @@ class DevSteps extends Component {
       <div className="dev-steps">
         <div className="container">
           <div className="content">
-            <div className="zs-title">Customized Approach</div>
+            <h2 className="zs-title">Customized Approach</h2>
             <div className="content-text">
               Zensoft creates custom software development solutions that respond to the unique needs of our clients. We harness our extensive experience across multiple business industries combined with a deep knowledge of technical architecture to create best-fit solutions for each project.
             </div>

@@ -1,5 +1,56 @@
+@import ../variables
+@import ../extensions
+
 .dev-services
   padding: 60px 0
 
   .zs-title
     text-align: center
+
+  .dev-services-list
+    // max-width: 90%
+    margin: 0 auto
+
+  .glide__arrows
+    @extend %flex-centered
+
+    button
+      padding: 0
+      background: transparent
+      border: none
+      outline: none
+      cursor: pointer
+      margin: 0 5px
+      position: relative
+
+      &.glide__arrow--left, &.glide__arrow--right
+        &:before
+          content: ''
+          width: 10px
+          height: 10px
+          border-right: 1px solid $blue
+          border-bottom: 1px solid $blue
+          position: absolute
+          top: 50%
+          left: 50%
+
+      &.glide__arrow--left
+        &:before
+          transform: rotate(135deg) translate(-2px, 6px)
+      
+      &.glide__arrow--right
+        &:before
+          transform: rotate(-45deg) translate(-1px, -9px)
+
+      &:hover
+        .circle-svg
+          stroke-dashoffset: 0
+
+    .circle-svg
+      fill: transparent
+      stroke: $blue
+      stroke-width: 1px
+      stroke-dasharray: 150
+      stroke-dashoffset: 150
+      transform: rotate(-90 40 40)
+      transition: stroke-dashoffset .5s linear

@@ -8,6 +8,7 @@ import DevSteps from '../components/DevSteps'
 import CompanyInfo from '../components/CompanyInfo'
 import SLoganDevider from '../components/SLoganDevider'
 import DevServices from '../components/DevServices'
+import StartProject from '../components/StartProject';
 
 class IndexPage extends Component {
   render() {
@@ -20,6 +21,7 @@ class IndexPage extends Component {
         <CompanyInfo />
         <SLoganDevider />
         <DevServices />
+        <StartProject />
       </Layout>
     )
   }
