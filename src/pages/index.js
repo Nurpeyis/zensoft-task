@@ -8,19 +8,21 @@ import DevSteps from '../components/DevSteps'
 import CompanyInfo from '../components/CompanyInfo'
 import SLoganDevider from '../components/SLoganDevider'
 import DevServices from '../components/DevServices'
+import DevCycles from '../components/DevCycles'
 import StartProject from '../components/StartProject';
 
 class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+        <SEO title="Home" keywords={[`task`, `zensoft`, `gatsby`, `react`]} />
         <Intro />
         <Devider />
         <DevSteps />
         <CompanyInfo />
         <SLoganDevider />
         <DevServices />
+        <DevCycles />
         <StartProject />
       </Layout>
     )
