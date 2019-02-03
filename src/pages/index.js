@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Layout from '../components/partials/Layout'
-import SEO from '../components/Seo'
+// import SEO from '../components/Seo'
 import Intro from '../components/Intro'
 import Devider from '../components/partials/Devider'
 import DevSteps from '../components/DevSteps'
@@ -15,7 +15,7 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <SEO title="Home" keywords={[`task`, `zensoft`, `gatsby`, `react`]} />
+        {/* <SEO title="Home" keywords={[`task`, `zensoft`, `gatsby`, `react`]} /> */}
         <Intro />
         <Devider />
         <DevSteps />
