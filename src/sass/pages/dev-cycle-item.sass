@@ -18,7 +18,7 @@
     position: absolute
     top: 0
     left: 0
-    transform: translateX(calc(-50% - 1px))
+    transform: translate(calc(-50% - 1px), -2px)
     background-color: $white
     transition: .3s linear
 
@@ -55,6 +55,9 @@
     justify-content: space-between
     flex: 1
     margin-left: 30px
+
+    .cycle-section
+      max-width: 280px
 
     h4
       margin: 0
@@ -97,3 +100,30 @@
           background-color: $blue
           border-radius: 5px
           box-shadow: 0 0 0 5px rgba($blue, .15)
+
+@media screen and (max-aspect-ratio: 9/9)
+  .dev-cycle-item
+    padding: 20px 0 60px
+    border: none
+    flex-direction: column
+
+    &:before
+      display: none
+
+    .cycle-title
+      width: 100%
+      margin-bottom: 30px
+
+      h3
+        max-width: 100%
+
+@media screen and (max-width: 575px)
+  .dev-cycle-item
+    padding-bottom: 30px
+
+    .cycle-sections-list
+      flex-direction: column
+      margin-left: 10px
+
+      .cycle-section
+        margin: 15px
