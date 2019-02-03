@@ -7,7 +7,7 @@
     <img alt="Zensoft" src="https://zensoft.io/static/img/logo.svg" height="60" />
   </a>
 </p>
-<h1 align="center">Test Task For The Job Vacancy</h1>
+<h1 align="center">A Test Task For The Job Vacancy</h1>
 
 ## 🚀 Guide
 
